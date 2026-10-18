@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Battery Forensics">
+  <title>Battery Forensics</title>
+  <defs><radialGradient id="bg" cx="50%" cy="46%" r="75%"><stop offset="0" stop-color="#252E36"/><stop offset="1" stop-color="#0B1014"/></radialGradient></defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <g transform="rotate(-9 256 256)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M166 176 H326 A38 38 0 0 1 364 214 V228 H374 A10 10 0 0 1 384 238 V274 A10 10 0 0 1 374 284 H364 V298 A38 38 0 0 1 326 336 H166 A38 38 0 0 1 128 298 V214 A38 38 0 0 1 166 176 Z" stroke="#F1EFE8" stroke-width="22"/>
+    <path d="M166 256 H198 L216 264 L238 210 L262 304 L276 256 H282 Q296 232 310 256 H328" stroke="#FFB81C" stroke-width="20"/>
+  </g>
+</svg>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextGen Tool — Battery Forensics</title>
+  <meta name="description" content="NextGen Tool builds honest, private Android utilities. Battery Forensics: evidence-based battery diagnostics. Every conclusion traced to evidence.">
+  <style>
+    :root {
+      --bg: #0B0E12;
+      --card-bg: #141A22;
+      --border: #263242;
+      --accent: #2EA05A;
+      --accent-hover: #248A4C;
+      --gold: #FFC46E;
+      --text: #F1F5F9;
+      --text-muted: #94A3B8;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #F4F7F4;
+        --card-bg: #FFFFFF;
+        --border: #E2E8F0;
+        --text: #0F172A;
+        --text-muted: #64748B;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg); color: var(--text); line-height: 1.65;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+    header.top {
+      display: flex; align-items: center; gap: 14px;
+      padding: 18px 0; margin-bottom: 8px;
+    }
+    header.top img { width: 44px; height: 44px; border-radius: 10px; }
+    header.top .brand { font-weight: 800; font-size: 20px; }
+    header.top a { text-decoration: none; color: inherit; }
+    header.top nav { margin-left: auto; display: flex; gap: 18px; }
+    header.top nav a { color: var(--text-muted); text-decoration: none; font-size: 15px; }
+    header.top nav a:hover { color: var(--text); }
+    .hero {
+      background: linear-gradient(135deg, #0E5A34 0%, #0B0E12 70%);
+      border: 1px solid var(--border); border-radius: 20px;
+      padding: 48px 32px; margin: 12px 0 28px; text-align: center;
+    }
+    .hero img.logo { width: 96px; height: 96px; border-radius: 22px; margin-bottom: 18px; }
+    .hero h1 { font-size: 40px; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .hero p.tag { color: var(--gold); font-size: 18px; margin-bottom: 14px; }
+    .hero p.desc { color: #CBD5E1; max-width: 620px; margin: 0 auto 22px; }
+    .soon {
+      display: inline-block; background: rgba(46,160,90,.15); color: var(--accent);
+      border: 1px solid var(--accent); border-radius: 999px; padding: 8px 20px; font-weight: 600;
+    }
+    h2 { font-size: 24px; margin: 36px 0 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+    .card {
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 20px;
+    }
+    .card h3 { font-size: 16px; margin-bottom: 6px; }
+    .card p { font-size: 14px; color: var(--text-muted); }
+    .shots { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; }
+    .shots img { height: 420px; border-radius: 14px; border: 1px solid var(--border); flex-shrink: 0; }
+    video.promo { width: 100%; border-radius: 14px; border: 1px solid var(--border); background: #000; }
+    .privacy-strip {
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px;
+      padding: 22px; margin-top: 28px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+    }
+    .privacy-strip a.btn {
+      background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+      padding: 10px 22px; border-radius: 10px; margin-left: auto;
+    }
+    .privacy-strip a.btn:hover { background: var(--accent-hover); }
+    footer { margin-top: 40px; color: var(--text-muted); font-size: 14px; text-align: center; }
+    footer a { color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="top">
+      <a href="index.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit"><img src="logo.svg" alt="NextGen Tool logo">
+      <span class="brand">NextGen Tool</span></a>
+      <nav>
+        <a href="index.html">All Apps</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:nextgentoolbd@gmail.com">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img class="logo" src="logo.svg" alt="Battery Forensics logo">
+      <h1>Battery Forensics</h1>
+      <p class="tag">Every conclusion traced to evidence.</p>
+      <p class="desc">Evidence-based battery diagnostics for Android. Find out what really drained your battery overnight — with every number labeled Measured, Estimated, or Unavailable. No fake stats. No placebo boosters. 100% on-device.</p>
+      <span class="soon">Coming soon on Google Play</span>
+    </section>
+
+    <h2 id="app">What it does</h2>
+    <div class="grid">
+      <div class="card"><h3>🔍 Drain Detective</h3><p>Overnight drain analysis — background activity, weak signal, wake events, each traced to evidence.</p></div>
+      <div class="card"><h3>⚡ Charging Health</h3><p>Every session analyzed: average power, peak temperature, slow-charger detection, charger profiles.</p></div>
+      <div class="card"><h3>🧪 Experiments</h3><p>Test your own hypothesis — "Is Instagram draining my battery?" — with controlled baseline tests.</p></div>
+      <div class="card"><h3>🔒 Private by Design</h3><p>No account, no sign-in, no cloud uploads. Export or delete your data anytime.</p></div>
+    </div>
+
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <img src="screenshots/shot-01-dashboard.png" alt="Dashboard">
+      <img src="screenshots/shot-02-drain-detective.png" alt="Drain Detective">
+      <img src="screenshots/shot-03-tests.png" alt="Tests and Experiments">
+      <img src="screenshots/shot-04-insights.png" alt="Insights">
+      <img src="screenshots/shot-05-charging-history.png" alt="Charging history">
+      <img src="screenshots/shot-06-charging-chargers.png" alt="Charger profiles">
+      <img src="screenshots/shot-07-charging-health.png" alt="Charging health">
+      <img src="screenshots/shot-08-privacy.png" alt="Privacy settings">
+    </div>
+
+    <h2>Promo video</h2>
+    <video class="promo" controls preload="metadata" poster="feature-graphic-1024x500.png">
+      <source src="promo-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="privacy-strip">
+      <div>
+        <strong>Privacy Policy &amp; Terms</strong><br>
+        <span style="color:var(--text-muted);font-size:14px">How Battery Forensics handles your data — in plain language.</span>
+      </div>
+      <a class="btn" href="privacy.html">Read policy</a>
+    </div>
+
+    <footer>
+      © 2026 NextGen Tool · <a href="mailto:nextgentoolbd@gmail.com">nextgentoolbd@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
