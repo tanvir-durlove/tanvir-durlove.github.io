@@ -4,77 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NextGen Tool — Battery Forensics</title>
-  <meta name="description" content="NextGen Tool builds honest, private Android utilities. Battery Forensics: evidence-based battery diagnostics. Every conclusion traced to evidence.">
+  <meta name="description" content="Battery Forensics: evidence-based battery diagnostics for Android. Every conclusion traced to evidence. 100% on-device.">
   <style>
     :root {
-      --bg: #0B0E12;
-      --card-bg: #141A22;
-      --border: #263242;
-      --accent: #2EA05A;
-      --accent-hover: #248A4C;
-      --gold: #FFC46E;
-      --text: #F1F5F9;
-      --text-muted: #94A3B8;
+      --bg: #0B0E13; --surface: #131924; --border: #243145;
+      --text: #F2F5F9; --muted: #97A3B6; --accent: #2EA05A; --accent-hover: #248A4C; --gold: #FFC46E;
     }
     @media (prefers-color-scheme: light) {
       :root {
-        --bg: #F4F7F4;
-        --card-bg: #FFFFFF;
-        --border: #E2E8F0;
-        --text: #0F172A;
-        --text-muted: #64748B;
+        --bg: #F5F6F4; --surface: #FFFFFF; --border: #E3E8EF;
+        --text: #101823; --muted: #5E6B7E; --gold: #B97F16;
       }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg); color: var(--text); line-height: 1.65;
-    }
-    .container { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
-    header.top {
-      display: flex; align-items: center; gap: 14px;
-      padding: 18px 0; margin-bottom: 8px;
-    }
-    header.top img { width: 44px; height: 44px; border-radius: 10px; }
-    header.top .brand { font-weight: 800; font-size: 20px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+    .container { max-width: 1040px; margin: 0 auto; padding: 24px 20px 72px; }
+    header.top { display: flex; align-items: center; gap: 14px; padding: 16px 0; margin-bottom: 8px; }
+    header.top img { width: 44px; height: 44px; border-radius: 11px; }
+    header.top .brand { font-weight: 800; font-size: 21px; letter-spacing: -.2px; }
     header.top a { text-decoration: none; color: inherit; }
-    header.top nav { margin-left: auto; display: flex; gap: 18px; }
-    header.top nav a { color: var(--text-muted); text-decoration: none; font-size: 15px; }
+    header.top nav { margin-left: auto; display: flex; gap: 20px; }
+    header.top nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
     header.top nav a:hover { color: var(--text); }
-    .hero {
-      background: linear-gradient(135deg, #0E5A34 0%, #0B0E12 70%);
-      border: 1px solid var(--border); border-radius: 20px;
-      padding: 48px 32px; margin: 12px 0 28px; text-align: center;
-    }
+    .hero { background: linear-gradient(135deg, #0E5A34 0%, #0B0E13 72%); border: 1px solid var(--border); border-radius: 22px; padding: 52px 32px; margin: 12px 0 30px; text-align: center; color: #F2F5F9; }
+    @media (prefers-color-scheme: light) { .hero { background: linear-gradient(135deg, #0E5A34 0%, #123B27 72%); } }
     .hero img.logo { width: 96px; height: 96px; border-radius: 22px; margin-bottom: 18px; }
-    .hero h1 { font-size: 40px; letter-spacing: -0.5px; margin-bottom: 10px; }
-    .hero p.tag { color: var(--gold); font-size: 18px; margin-bottom: 14px; }
-    .hero p.desc { color: #CBD5E1; max-width: 620px; margin: 0 auto 22px; }
-    .soon {
-      display: inline-block; background: rgba(46,160,90,.15); color: var(--accent);
-      border: 1px solid var(--accent); border-radius: 999px; padding: 8px 20px; font-weight: 600;
-    }
-    h2 { font-size: 24px; margin: 36px 0 16px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
-    .card {
-      background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 20px;
-    }
-    .card h3 { font-size: 16px; margin-bottom: 6px; }
-    .card p { font-size: 14px; color: var(--text-muted); }
+    .hero h1 { font-size: clamp(32px, 5vw, 42px); letter-spacing: -.6px; margin-bottom: 10px; }
+    .hero p.tag { color: var(--gold); font-size: 18px; font-weight: 600; margin-bottom: 14px; }
+    .hero p.desc { color: #CBD5E1; max-width: 640px; margin: 0 auto 24px; }
+    .soon { display: inline-block; background: rgba(46,160,90,.16); color: #4ADE80; border: 1px solid var(--accent); border-radius: 999px; padding: 8px 20px; font-weight: 600; }
+    h2 { font-size: 25px; letter-spacing: -.3px; margin: 40px 0 18px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 14px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+    .card h3 { font-size: 16.5px; margin-bottom: 6px; }
+    .card p { font-size: 14.5px; color: var(--muted); }
     .shots { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; }
     .shots img { height: 420px; border-radius: 14px; border: 1px solid var(--border); flex-shrink: 0; }
-    video.promo { width: 100%; border-radius: 14px; border: 1px solid var(--border); background: #000; }
-    .privacy-strip {
-      background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px;
-      padding: 22px; margin-top: 28px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
-    }
-    .privacy-strip a.btn {
-      background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
-      padding: 10px 22px; border-radius: 10px; margin-left: auto;
-    }
+    video.promo { width: 100%; border-radius: 16px; border: 1px solid var(--border); background: #000; }
+    .privacy-strip { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-top: 30px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .privacy-strip a.btn { background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; padding: 10px 22px; border-radius: 10px; margin-left: auto; }
     .privacy-strip a.btn:hover { background: var(--accent-hover); }
-    footer { margin-top: 40px; color: var(--text-muted); font-size: 14px; text-align: center; }
-    footer a { color: var(--text-muted); }
+    footer { margin-top: 44px; color: var(--muted); font-size: 14px; text-align: center; }
+    footer a { color: var(--muted); }
   </style>
 </head>
 <body>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextGen Tool — Nudgy</title>
+  <meta name="description" content="Nudgy is a calm daily planner for Android — tasks, reminders, focus time and two-way Google Calendar sync. Things Get Done.">
+  <style>
+    :root {
+      --bg: #0B0E13; --surface: #131924; --border: #243145;
+      --text: #F2F5F9; --muted: #97A3B6; --accent: #F4604E; --accent-hover: #D94A38; --gold: #FFC46E;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #FBF6EE; --surface: #FFFFFF; --border: #EFE3D3;
+        --text: #292019; --muted: #7A6A5E; --gold: #B97F16;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+    .container { max-width: 1040px; margin: 0 auto; padding: 24px 20px 72px; }
+    header.top { display: flex; align-items: center; gap: 14px; padding: 16px 0; margin-bottom: 8px; }
+    header.top img { width: 44px; height: 44px; border-radius: 11px; }
+    header.top .brand { font-weight: 800; font-size: 21px; letter-spacing: -.2px; }
+    header.top a { text-decoration: none; color: inherit; }
+    header.top nav { margin-left: auto; display: flex; gap: 20px; }
+    header.top nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
+    header.top nav a:hover { color: var(--text); }
+    .hero { background: linear-gradient(135deg, #F4604E 0%, #C93B2A 78%); border: 1px solid var(--border); border-radius: 22px; padding: 52px 32px; margin: 12px 0 30px; text-align: center; color: #fff; }
+    .hero img.logo { width: 96px; height: 96px; border-radius: 22px; margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(32px, 5vw, 42px); letter-spacing: -.6px; margin-bottom: 10px; }
+    .hero p.tag { color: #FFE9C9; font-size: 18px; font-weight: 600; margin-bottom: 14px; }
+    .hero p.desc { color: #FFF1E8; max-width: 640px; margin: 0 auto 24px; }
+    .soon { display: inline-block; background: rgba(255,255,255,.16); color: #fff; border: 1px solid rgba(255,255,255,.65); border-radius: 999px; padding: 8px 20px; font-weight: 600; }
+    h2 { font-size: 25px; letter-spacing: -.3px; margin: 40px 0 18px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 14px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+    .card h3 { font-size: 16.5px; margin-bottom: 6px; }
+    .card p { font-size: 14.5px; color: var(--muted); }
+    .shots { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; }
+    .shots img { height: 420px; border-radius: 14px; border: 1px solid var(--border); flex-shrink: 0; }
+    .privacy-strip { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-top: 30px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .privacy-strip a.btn { background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; padding: 10px 22px; border-radius: 10px; }
+    .privacy-strip a.btn:hover { background: var(--accent-hover); }
+    .privacy-strip a.btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+    footer { margin-top: 44px; color: var(--muted); font-size: 14px; text-align: center; }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="top">
+      <a href="../index.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit"><img src="../logo.svg" alt="NextGen Tool logo">
+      <span class="brand">NextGen Tool</span></a>
+      <nav>
+        <a href="../index.html">All Apps</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="mailto:nextgentoolbd@gmail.com">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img class="logo" src="icon.png" alt="Nudgy logo">
+      <h1>Nudgy</h1>
+      <p class="tag">Things Get Done.</p>
+      <p class="desc">A calm daily planner that helps you get things done without the noise. Plan tasks and reminders in seconds, block focus time, and keep your Google Calendar in sync — in English and Bengali.</p>
+      <span class="soon">Now in closed testing on Google Play</span>
+    </section>
+
+    <h2 id="app">What it does</h2>
+    <div class="grid">
+      <div class="card"><h3>💬 Plan in seconds</h3><p>Type it, or just say what you need in the chat — Nudgy turns it into a task, an event, or a focus block, with reminders at the exact time you set.</p></div>
+      <div class="card"><h3>📅 Calendar in sync</h3><p>Two-way sync with Google Calendar: events created in Nudgy appear in Google Calendar, and changes there flow back.</p></div>
+      <div class="card"><h3>🎙️ Hey Nudgy (optional)</h3><p>An on-device wake word opens your planner hands-free. Off by default — nothing is recorded or sent anywhere.</p></div>
+      <div class="card"><h3>🔒 Your data, your choice</h3><p>Guest Mode works fully offline, no account needed. Sign in only if you want private sync — and delete your account and data anytime.</p></div>
+    </div>
+
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <img src="screenshots/shot-01-signin.jpg" alt="Sign in — meet your day's smart planner">
+      <img src="screenshots/shot-02-home.jpg" alt="Home — let's make today count">
+      <img src="screenshots/shot-03-tasks.jpg" alt="Tasks — stay on track">
+      <img src="screenshots/shot-04-calendar.jpg" alt="Calendar — spot free time, add focus">
+      <img src="screenshots/shot-05-profile.jpg" alt="Profile — a planner that remembers you">
+    </div>
+
+    <div class="privacy-strip">
+      <div>
+        <strong>Privacy &amp; your data</strong><br>
+        <span style="color:var(--muted);font-size:14px">How Nudgy handles your data — in plain language, plus how to delete your account.</span>
+      </div>
+      <span style="margin-left:auto;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="privacy-policy.html">Privacy Policy</a>
+        <a class="btn ghost" href="delete-account.html">Delete Account</a>
+      </span>
+    </div>
+
+    <footer>
+      © 2026 NextGen Tool · <a href="mailto:nextgentoolbd@gmail.com">nextgentoolbd@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>

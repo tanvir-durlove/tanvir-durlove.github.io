@@ -3,71 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NextGen Tool — Honest Android Utilities</title>
-  <meta name="description" content="NextGen Tool builds honest, private Android utilities. No accounts, no cloud uploads, no dark patterns.">
+  <title>NextGen Tool — Honest Android Apps</title>
+  <meta name="description" content="NextGen Tool builds honest, private Android apps. Your data stays yours — on your device by default, in your own account only if you choose.">
   <style>
     :root {
-      --bg: #0B0E12;
-      --card-bg: #141A22;
-      --border: #263242;
-      --accent: #2EA05A;
-      --accent-hover: #248A4C;
-      --gold: #FFC46E;
-      --text: #F1F5F9;
-      --text-muted: #94A3B8;
+      --bg: #0B0E13; --surface: #131924; --surface2: #0F141D; --border: #243145;
+      --text: #F2F5F9; --muted: #97A3B6; --green: #2EA05A; --coral: #F4604E; --gold: #FFC46E;
     }
     @media (prefers-color-scheme: light) {
       :root {
-        --bg: #F4F7F4;
-        --card-bg: #FFFFFF;
-        --border: #E2E8F0;
-        --text: #0F172A;
-        --text-muted: #64748B;
+        --bg: #F5F6F4; --surface: #FFFFFF; --surface2: #FFFFFF; --border: #E3E8EF;
+        --text: #101823; --muted: #5E6B7E; --gold: #B97F16;
       }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg); color: var(--text); line-height: 1.65;
-    }
-    .container { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
-    header.top { display: flex; align-items: center; gap: 14px; padding: 18px 0; }
-    header.top img { width: 44px; height: 44px; border-radius: 10px; }
-    header.top .brand { font-weight: 800; font-size: 20px; }
-    header.top nav { margin-left: auto; display: flex; gap: 18px; }
-    header.top nav a { color: var(--text-muted); text-decoration: none; font-size: 15px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+    .container { max-width: 1040px; margin: 0 auto; padding: 24px 20px 72px; }
+    header.top { display: flex; align-items: center; gap: 14px; padding: 16px 0; }
+    header.top img { width: 44px; height: 44px; border-radius: 11px; }
+    header.top .brand { font-weight: 800; font-size: 21px; letter-spacing: -.2px; }
+    header.top nav { margin-left: auto; display: flex; gap: 20px; }
+    header.top nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
     header.top nav a:hover { color: var(--text); }
-    .hero { text-align: center; padding: 56px 20px 40px; }
-    .hero h1 { font-size: 42px; letter-spacing: -0.5px; margin-bottom: 12px; }
-    .hero h1 .g { color: var(--accent); }
-    .hero p { color: var(--text-muted); font-size: 18px; max-width: 600px; margin: 0 auto; }
-    h2 { font-size: 24px; margin: 36px 0 16px; }
-    .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-    .app-card {
-      background: var(--card-bg); border: 1px solid var(--border); border-radius: 18px;
-      padding: 28px; text-decoration: none; color: var(--text); display: block;
-      transition: transform .15s ease, border-color .15s ease;
-    }
-    a.app-card:hover { transform: translateY(-3px); border-color: var(--accent); }
-    .app-card img.logo { width: 72px; height: 72px; border-radius: 16px; margin-bottom: 14px; }
-    .app-card h3 { font-size: 20px; margin-bottom: 6px; }
-    .app-card p.tag { color: var(--gold); font-size: 14px; margin-bottom: 8px; }
-    .app-card p.desc { font-size: 14px; color: var(--text-muted); margin-bottom: 14px; }
-    .app-card .link { color: var(--accent); font-weight: 600; font-size: 15px; }
-    .app-card.soon { opacity: .75; border-style: dashed; }
-    .app-card.soon .pill {
-      display: inline-block; font-size: 12px; font-weight: 700; color: var(--gold);
-      border: 1px solid var(--gold); border-radius: 999px; padding: 3px 12px; margin-bottom: 10px;
-    }
-    .principles {
-      background: var(--card-bg); border: 1px solid var(--border); border-radius: 18px;
-      padding: 28px; margin-top: 36px;
-    }
-    .principles ul { list-style: none; display: grid; gap: 10px; margin-top: 12px; }
-    .principles li { font-size: 15px; color: var(--text-muted); }
-    .principles li b { color: var(--text); }
-    footer { margin-top: 48px; color: var(--text-muted); font-size: 14px; text-align: center; }
-    footer a { color: var(--text-muted); }
+    .hero { text-align: center; padding: 72px 20px 48px; }
+    .hero h1 { font-size: clamp(36px, 6vw, 54px); line-height: 1.12; letter-spacing: -1px; margin-bottom: 16px; }
+    .hero h1 .g { color: var(--green); }
+    .hero h1 .c { color: var(--coral); }
+    .hero p { color: var(--muted); font-size: 18px; max-width: 640px; margin: 0 auto; }
+    h2 { font-size: 25px; letter-spacing: -.3px; margin: 44px 0 18px; }
+    .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+    .app-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 30px; text-decoration: none; color: var(--text); display: block; transition: transform .15s ease, border-color .15s ease; }
+    a.app-card:hover { transform: translateY(-3px); }
+    a.app-card.green:hover { border-color: var(--green); }
+    a.app-card.coral:hover { border-color: var(--coral); }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; }
+    .app-card img.logo { width: 74px; height: 74px; border-radius: 17px; }
+    .pill { font-size: 11.5px; font-weight: 700; letter-spacing: .4px; border-radius: 999px; padding: 4px 12px; border: 1px solid; white-space: nowrap; }
+    .pill.green { color: var(--green); border-color: var(--green); }
+    .pill.coral { color: var(--coral); border-color: var(--coral); }
+    .app-card h3 { font-size: 21px; margin-bottom: 5px; }
+    .app-card p.tag { color: var(--gold); font-size: 14.5px; font-weight: 600; margin-bottom: 8px; }
+    .app-card p.desc { font-size: 14.5px; color: var(--muted); margin-bottom: 16px; }
+    .app-card .link { font-weight: 650; font-size: 15px; }
+    .app-card .link.green { color: var(--green); }
+    .app-card .link.coral { color: var(--coral); }
+    .principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .principle { background: var(--surface2); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+    .principle h3 { font-size: 16.5px; margin-bottom: 6px; }
+    .principle p { font-size: 14.5px; color: var(--muted); }
+    footer { margin-top: 56px; color: var(--muted); font-size: 14px; text-align: center; }
+    footer a { color: var(--muted); }
   </style>
 </head>
 <body>
@@ -82,33 +67,48 @@
     </header>
 
     <section class="hero">
-      <h1>Honest tools for <span class="g">your phone.</span></h1>
-      <p>NextGen Tool builds private, no-nonsense Android utilities. No accounts. No cloud uploads. No dark patterns.</p>
+      <h1>Honest tools for <span class="g">your phone.</span><br>Plans that <span class="c">get done.</span></h1>
+      <p>NextGen Tool builds private, no-nonsense Android apps. Your data stays yours — on your device by default, in your own account only if you choose. No dark patterns. No data selling.</p>
     </section>
 
     <h2 id="apps">Our apps</h2>
     <div class="apps">
-      <a class="app-card" href="battery-forensics.html">
-        <img class="logo" src="logo.svg" alt="Battery Forensics logo">
+      <a class="app-card green" href="battery-forensics.html">
+        <div class="card-top">
+          <img class="logo" src="logo.svg" alt="Battery Forensics logo">
+          <span class="pill green">COMING SOON ON GOOGLE PLAY</span>
+        </div>
         <h3>Battery Forensics</h3>
         <p class="tag">Every conclusion traced to evidence.</p>
         <p class="desc">Evidence-based battery diagnostics — drain detective, charging health, controlled experiments. 100% on-device.</p>
-        <span class="link">View app →</span>
+        <span class="link green">View app →</span>
       </a>
-      <div class="app-card soon">
-        <span class="pill">IN THE WORKS</span>
-        <h3>More apps coming</h3>
-        <p class="desc">New utilities are on the way — each one private, honest, and built with the same care.</p>
-      </div>
+      <a class="app-card coral" href="nudgy/">
+        <div class="card-top">
+          <img class="logo" src="nudgy/icon.png" alt="Nudgy logo">
+          <span class="pill coral">IN CLOSED TESTING</span>
+        </div>
+        <h3>Nudgy</h3>
+        <p class="tag">Things Get Done.</p>
+        <p class="desc">A calm daily planner — tasks, reminders, focus time and two-way Google Calendar sync. Guest mode works fully offline.</p>
+        <span class="link coral">View app →</span>
+      </a>
     </div>
 
+    <h2>What we stand for</h2>
     <div class="principles">
-      <h2 style="margin:0 0 4px">What we stand for</h2>
-      <ul>
-        <li><b>🔒 Private by design</b> — your data stays on your device. No sign-in, no tracking.</li>
-        <li><b>🔍 Honest numbers</b> — if a metric can't be measured, we say so instead of inventing it.</li>
-        <li><b>📦 No bloat</b> — small, focused tools that do one job well.</li>
-      </ul>
+      <div class="principle">
+        <h3>🔒 Private by design</h3>
+        <p>Your data stays on your device by default. Where an app offers sync, it is always your choice — and it goes to your own private account, never to us.</p>
+      </div>
+      <div class="principle">
+        <h3>🔍 Honest numbers</h3>
+        <p>If a metric can't be measured, we say so instead of inventing it. No fake stats, no placebo boosters.</p>
+      </div>
+      <div class="principle">
+        <h3>📦 No bloat</h3>
+        <p>Small, focused apps that do their job well — no dark patterns, no engagement traps.</p>
+      </div>
     </div>
 
     <footer>
