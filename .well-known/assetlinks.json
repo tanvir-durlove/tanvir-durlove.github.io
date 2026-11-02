@@ -1,0 +1,1 @@
+[{"relation": ["delegate_permission/common.handle_all_urls"], "target": {"namespace": "android_app", "package_name": "com.nextgentool.nudgy", "sha256_cert_fingerprints": ["F7:7F:7B:27:53:C8:65:E6:F1:E7:3B:25:D5:FB:10:5E:B3:AE:45:BB:A3:9E:AF:7F:84:37:22:18:29:C2:3A:25", "E7:A9:D5:EC:E3:42:BC:DA:15:8D:99:CC:B1:CC:8F:43:97:09:E6:3A:C3:0F:DC:1B:82:05:99:C9:46:C7:D5:61"]}}]
