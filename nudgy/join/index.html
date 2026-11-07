@@ -5,30 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join a group on Nudgy — NextGen Tool</title>
   <meta name="description" content="Open this group invite in the Nudgy app, or get Nudgy from Google Play.">
-  <style>
-    :root {
-      --bg: #0B0E13; --surface: #131924; --border: #243145;
-      --text: #F2F5F9; --muted: #97A3B6; --accent: #F4604E; --accent-hover: #D94A38;
-    }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #FBF6EE; --surface: #FFFFFF; --border: #EFE3D3;
-        --text: #292019; --muted: #7A6A5E;
-      }
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
-    .container { max-width: 640px; margin: 0 auto; padding: 72px 20px; text-align: center; }
-    h1 { font-size: 32px; line-height: 1.2; margin-bottom: 16px; }
-    p { color: var(--muted); margin-bottom: 16px; }
-    .code { display: none; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin: 24px 0; font-size: 18px; letter-spacing: 2px; color: var(--text); }
-    .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700; padding: 14px 28px; border-radius: 999px; margin-top: 8px; }
-    .btn:hover { background: var(--accent-hover); }
-    .note { font-size: 14px; margin-top: 24px; }
-  </style>
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
-  <div class="container">
+<body class="accent-coral">
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="/"><img src="/logo.svg" alt="NextGen Tool logo">NextGen Tool</a>
+      <nav>
+        <a href="/">All Apps</a>
+        <a href="/nudgy/">Nudgy</a>
+      </nav>
+    </div>
+  </header>
+  <div class="join">
     <h1>Join a group on Nudgy</h1>
     <p>This link opens the group in the Nudgy app. If you don't have the app yet, get it from Google Play and then open the link again.</p>
     <p class="code" id="codeBox">Invite code: <strong id="codeText"></strong></p>
@@ -45,5 +35,6 @@
       }
     })();
   </script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>

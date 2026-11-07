@@ -5,115 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NextGen Tool — Honest Android Apps</title>
   <meta name="description" content="NextGen Tool builds honest, private Android apps. Your data stays yours — on your device by default, in your own account only if you choose.">
-  <style>
-    :root {
-      --bg: #0B0E13; --surface: #131924; --surface2: #0F141D; --border: #243145;
-      --text: #F2F5F9; --muted: #97A3B6; --green: #2EA05A; --coral: #F4604E; --gold: #FFC46E;
-    }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #F5F6F4; --surface: #FFFFFF; --surface2: #FFFFFF; --border: #E3E8EF;
-        --text: #101823; --muted: #5E6B7E; --gold: #B97F16;
-      }
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
-    .container { max-width: 1040px; margin: 0 auto; padding: 24px 20px 72px; }
-    header.top { display: flex; align-items: center; gap: 14px; padding: 16px 0; }
-    header.top img { width: 44px; height: 44px; border-radius: 11px; }
-    header.top .brand { font-weight: 800; font-size: 21px; letter-spacing: -.2px; }
-    header.top nav { margin-left: auto; display: flex; gap: 20px; }
-    header.top nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
-    header.top nav a:hover { color: var(--text); }
-    .hero { text-align: center; padding: 72px 20px 48px; }
-    .hero h1 { font-size: clamp(36px, 6vw, 54px); line-height: 1.12; letter-spacing: -1px; margin-bottom: 16px; }
-    .hero h1 .g { color: var(--green); }
-    .hero h1 .c { color: var(--coral); }
-    .hero p { color: var(--muted); font-size: 18px; max-width: 640px; margin: 0 auto; }
-    h2 { font-size: 25px; letter-spacing: -.3px; margin: 44px 0 18px; }
-    .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
-    .app-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 30px; text-decoration: none; color: var(--text); display: block; transition: transform .15s ease, border-color .15s ease; }
-    a.app-card:hover { transform: translateY(-3px); }
-    a.app-card.green:hover { border-color: var(--green); }
-    a.app-card.coral:hover { border-color: var(--coral); }
-    .card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; }
-    .app-card img.logo { width: 74px; height: 74px; border-radius: 17px; }
-    .pill { font-size: 11.5px; font-weight: 700; letter-spacing: .4px; border-radius: 999px; padding: 4px 12px; border: 1px solid; white-space: nowrap; }
-    .pill.green { color: var(--green); border-color: var(--green); }
-    .pill.coral { color: var(--coral); border-color: var(--coral); }
-    .app-card h3 { font-size: 21px; margin-bottom: 5px; }
-    .app-card p.tag { color: var(--gold); font-size: 14.5px; font-weight: 600; margin-bottom: 8px; }
-    .app-card p.desc { font-size: 14.5px; color: var(--muted); margin-bottom: 16px; }
-    .app-card .link { font-weight: 650; font-size: 15px; }
-    .app-card .link.green { color: var(--green); }
-    .app-card .link.coral { color: var(--coral); }
-    .principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
-    .principle { background: var(--surface2); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
-    .principle h3 { font-size: 16.5px; margin-bottom: 6px; }
-    .principle p { font-size: 14.5px; color: var(--muted); }
-    footer { margin-top: 56px; color: var(--muted); font-size: 14px; text-align: center; }
-    footer a { color: var(--muted); }
-  </style>
+  <meta property="og:title" content="NextGen Tool — Honest Android Apps">
+  <meta property="og:description" content="Private, no-nonsense Android apps. Your data stays yours — on your device by default, in your own account only if you choose.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tanvir-durlove.github.io/">
+  <meta property="og:image" content="https://tanvir-durlove.github.io/feature-graphic-1024x500.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-  <div class="container">
-    <header class="top">
-      <img src="logo.svg" alt="NextGen Tool logo">
-      <span class="brand">NextGen Tool</span>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="/"><img src="/logo.svg" alt="NextGen Tool logo">NextGen Tool</a>
       <nav>
         <a href="#apps">Apps</a>
         <a href="mailto:nextgentoolbd@gmail.com">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
+  <div class="container">
     <section class="hero">
+      <span class="eyebrow">NextGen Tool · Android apps</span>
       <h1>Honest tools for <span class="g">your phone.</span><br>Plans that <span class="c">get done.</span></h1>
-      <p>NextGen Tool builds private, no-nonsense Android apps. Your data stays yours — on your device by default, in your own account only if you choose. No dark patterns. No data selling.</p>
+      <p class="lede">NextGen Tool builds private, no-nonsense Android apps. Your data stays yours — on your device by default, in your own account only if you choose. No dark patterns. No data selling.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#apps">See our apps</a>
+        <a class="btn ghost" href="mailto:nextgentoolbd@gmail.com">Contact us</a>
+      </div>
     </section>
 
-    <h2 id="apps">Our apps</h2>
+    <h2 class="section reveal" id="apps">Our apps</h2>
     <div class="apps">
-      <a class="app-card green" href="battery-forensics.html">
+      <a class="app-card accent-green reveal" href="/battery-forensics.html" data-tilt>
         <div class="card-top">
-          <img class="logo" src="logo.svg" alt="Battery Forensics logo">
-          <span class="pill green">COMING SOON ON GOOGLE PLAY</span>
+          <img class="logo" src="/logo.svg" alt="Battery Forensics icon">
+          <span class="pill green">IN PRODUCTION REVIEW</span>
         </div>
         <h3>Battery Forensics</h3>
         <p class="tag">Every conclusion traced to evidence.</p>
         <p class="desc">Evidence-based battery diagnostics — drain detective, charging health, controlled experiments. 100% on-device.</p>
-        <span class="link green">View app →</span>
+        <span class="link">View app →</span>
       </a>
-      <a class="app-card coral" href="nudgy/">
+      <a class="app-card accent-coral reveal" href="/nudgy/" data-tilt>
         <div class="card-top">
-          <img class="logo" src="nudgy/icon.jpg" alt="Nudgy logo">
+          <img class="logo" src="/nudgy/icon.jpg" alt="Nudgy icon">
           <span class="pill coral">IN CLOSED TESTING</span>
         </div>
         <h3>Nudgy</h3>
         <p class="tag">Things Get Done.</p>
         <p class="desc">A calm daily planner — tasks, reminders, focus time and two-way Google Calendar sync. Guest mode works fully offline.</p>
-        <span class="link coral">View app →</span>
+        <span class="link">View app →</span>
+      </a>
+      <a class="app-card accent-orange reveal" href="/one-word-a-day/" data-tilt>
+        <div class="card-top">
+          <span class="wordmark" aria-hidden="true">W</span>
+          <span class="pill orange">IN CLOSED TESTING</span>
+        </div>
+        <h3>One Word A Day</h3>
+        <p class="tag">One word. One puzzle a day.</p>
+        <p class="desc">A daily 5-letter word puzzle — guess the word, keep your streak, no account, no subscription. Fully offline.</p>
+        <span class="link">View app →</span>
       </a>
     </div>
 
-    <h2>What we stand for</h2>
+    <h2 class="section reveal">What we stand for</h2>
     <div class="principles">
-      <div class="principle">
+      <div class="principle reveal">
         <h3>🔒 Private by design</h3>
         <p>Your data stays on your device by default. Where an app offers sync, it is always your choice — and it goes to your own private account, never to us.</p>
       </div>
-      <div class="principle">
+      <div class="principle reveal">
         <h3>🔍 Honest numbers</h3>
         <p>If a metric can't be measured, we say so instead of inventing it. No fake stats, no placebo boosters.</p>
       </div>
-      <div class="principle">
+      <div class="principle reveal">
         <h3>📦 No bloat</h3>
         <p>Small, focused apps that do their job well — no dark patterns, no engagement traps.</p>
       </div>
     </div>
 
-    <footer>
-      © 2026 NextGen Tool · <a href="mailto:nextgentoolbd@gmail.com">nextgentoolbd@gmail.com</a>
+    <footer class="site">
+      <div class="links">
+        <a href="/battery-forensics.html">Battery Forensics</a>
+        <a href="/nudgy/">Nudgy</a>
+        <a href="/one-word-a-day/">One Word A Day</a>
+        <a href="/privacy.html">Privacy (Battery)</a>
+        <a href="/nudgy/privacy-policy.html">Privacy (Nudgy)</a>
+      </div>
+      <p>© <span data-year>2026</span> NextGen Tool · <a href="mailto:nextgentoolbd@gmail.com">nextgentoolbd@gmail.com</a></p>
     </footer>
   </div>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
