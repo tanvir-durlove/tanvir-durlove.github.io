@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open a date in Nudgy — NextGen Tool</title>
+  <meta name="description" content="Open this date in the Nudgy app, or get Nudgy from Google Play.">
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="accent-coral">
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="/"><img src="/logo.svg" alt="NextGen Tool logo">NextGen Tool</a>
+      <nav>
+        <a href="/">All Apps</a>
+        <a href="/nudgy/">Nudgy</a>
+      </nav>
+    </div>
+  </header>
+  <div class="join">
+    <h1>Open a date in Nudgy</h1>
+    <p>This link opens the date in the Nudgy app's Calendar. If you don't have the app yet, get it from Google Play and then open the link again.</p>
+    <p class="code" id="dateBox">Date: <strong id="dateText"></strong></p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.nextgentool.nudgy">Get Nudgy</a>
+    <p class="note">Nudgy is a calm daily planner for Android by NextGen Tool.</p>
+  </div>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var date = params.get('d');
+      var time = params.get('t');
+      var title = params.get('title');
+      if (date) {
+        var text = date;
+        if (time) { text += ' at ' + time; }
+        if (title) { text += ' — ' + title; }
+        document.getElementById('dateText').textContent = text;
+        document.getElementById('dateBox').style.display = 'block';
+      }
+    })();
+  </script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
